@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">StarWars-App</string>
+    <string name="info_text">Information about your favourite characters!</string>
+    <string name="star_wars_logo">Star Wars Logo</string>
+    <string name="search_text">Search…</string>
 </resources>
