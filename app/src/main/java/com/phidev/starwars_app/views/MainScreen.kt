@@ -1,9 +1,13 @@
 package com.phidev.starwars_app.views
 
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 
 @Composable
-fun MainScreen(){
-    Text(text = "Hallo")
+fun MainScreen() {
+    Column {
+        Header()
+        Searchbar()
+        ShowListOfCharacters()
+    }
 }
