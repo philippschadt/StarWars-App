@@ -3,7 +3,7 @@ package com.phidev.starwars_app.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Result(
+data class Character(
     val name: String,
     val height: String,
     val mass: String,
