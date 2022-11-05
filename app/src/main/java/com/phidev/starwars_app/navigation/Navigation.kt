@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.phidev.starwars_app.model.ScreenDestinations
-import com.phidev.starwars_app.views.DetailScreen
+import com.phidev.starwars_app.views.detail.DetailScreen
 import com.phidev.starwars_app.views.main.MainScreen
 
 @Composable

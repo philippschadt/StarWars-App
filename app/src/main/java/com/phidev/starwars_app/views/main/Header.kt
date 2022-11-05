@@ -1,4 +1,4 @@
-package com.phidev.starwars_app.views
+package com.phidev.starwars_app.views.main
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

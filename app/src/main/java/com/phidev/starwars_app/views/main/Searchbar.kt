@@ -1,4 +1,4 @@
-package com.phidev.starwars_app.views
+package com.phidev.starwars_app.views.main
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -32,6 +32,8 @@ import com.phidev.starwars_app.R
 @Composable
 fun Searchbar() {
     var state by rememberSaveable { mutableStateOf("") }
+    val currentFocus = LocalFocusManager.current
+    val maxLength = 20
 
     Column(
         modifier = Modifier
@@ -39,14 +41,13 @@ fun Searchbar() {
         verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        val maxLength = 20
-        val currentFocus = LocalFocusManager.current
         OutlinedTextField(
             modifier = Modifier
                 .padding(bottom = 15.dp),
             value = state,
             onValueChange = {
-                if (it.length <= maxLength) state = it
+                if (it.length <= maxLength)
+                    state = it
             },
             shape = RoundedCornerShape(25.dp),
             singleLine = true,
