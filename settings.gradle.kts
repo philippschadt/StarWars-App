@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "StarWars-App"
-include ':app'
+include(":app")
