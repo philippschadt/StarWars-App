@@ -46,8 +46,9 @@ fun Searchbar() {
                 .padding(bottom = 15.dp),
             value = state,
             onValueChange = {
-                if (it.length <= maxLength)
+                if (it.length <= maxLength) {
                     state = it
+                }
             },
             shape = RoundedCornerShape(25.dp),
             singleLine = true,

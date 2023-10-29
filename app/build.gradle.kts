@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
@@ -77,7 +78,12 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.4")
     implementation("io.ktor:ktor-client-logging:2.3.4")
-    implementation("ch.qos.logback:logback-classic:1.2.3")
+    implementation("ch.qos.logback:logback-classic:1.3.0")
     // Json
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+}
+
+ktlint {
+    android.set(true)
+    disabledRules.set(listOf("no-wildcard-imports"))
 }

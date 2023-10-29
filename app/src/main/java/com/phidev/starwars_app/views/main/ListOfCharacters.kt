@@ -1,6 +1,5 @@
 package com.phidev.starwars_app.views.main
 
-
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -20,17 +19,12 @@ fun ShowListOfCharacters(navController: NavController) {
             value = service.getCharacters()
         }
     )
-    LazyVerticalGrid(columns = GridCells.Adaptive(150.dp),
+    LazyVerticalGrid(
+        columns = GridCells.Adaptive(150.dp),
         content = {
             items(response.value.results.sortedBy { it.name }) {
                 CharacterItem(character = it, navController)
-
             }
         }
     )
 }
-
-
-
-
-

@@ -11,7 +11,6 @@ private val DarkColorPalette = darkColors(
     secondary = Teal200
 )
 
-
 @Composable
 fun StarWarsAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {

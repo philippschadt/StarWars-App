@@ -12,7 +12,6 @@ import com.phidev.starwars_app.views.main.MainScreen
 
 @Composable
 fun Navigation() {
-
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "main_screen") {
         composable(ScreenDestinations.MainScreen.route) {

@@ -39,5 +39,4 @@ fun CharacterItem(character: Character, navController: NavController) {
             CharacterInformation(name = character.name)
         }
     }
-
 }

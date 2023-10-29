@@ -13,6 +13,6 @@ fun CharacterInformation(name: String) {
         style = TextStyle(
             textAlign = TextAlign.Center,
             color = Color.Yellow
-        ),
+        )
     )
 }

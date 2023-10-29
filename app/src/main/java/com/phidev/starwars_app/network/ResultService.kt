@@ -12,14 +12,14 @@ interface ResultService {
     suspend fun getCharacters(): CharacterResult
     suspend fun getCharacterByName(name: String): Character
 
-    companion object{
-        fun create():ResultService{
+    companion object {
+        fun create(): ResultService {
             return ResultServiceImplementation(
-                client = HttpClient(Android){
-                    install(Logging){
+                client = HttpClient(Android) {
+                    install(Logging) {
                         level = LogLevel.ALL
                     }
-                    install(ContentNegotiation){
+                    install(ContentNegotiation) {
                         json()
                     }
                 }
