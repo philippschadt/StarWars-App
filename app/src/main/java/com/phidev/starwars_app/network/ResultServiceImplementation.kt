@@ -5,7 +5,6 @@ import com.phidev.starwars_app.model.CharacterResult
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 class ResultServiceImplementation(private val client: HttpClient) : ResultService {
@@ -23,7 +22,13 @@ class ResultServiceImplementation(private val client: HttpClient) : ResultServic
     }
 
     override suspend fun getCharacters(): CharacterResult {
-        return response(HttpRoutes.CHARACTERS)
+        val characters = mutableListOf<CharacterResult>()
+        for (page in 1..9) {
+            val result = HttpRoutes.CHARACTERS + "$page"
+            val characterResult = response(result)
+            characters.add(characterResult)
+        }
+        return CharacterResult(characters.flatMap { it.results })
     }
 
     override suspend fun getCharacterByName(name: String): Character {

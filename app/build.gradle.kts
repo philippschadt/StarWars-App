@@ -78,7 +78,6 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.4")
     implementation("io.ktor:ktor-client-logging:2.3.4")
-    implementation("ch.qos.logback:logback-classic:1.3.0")
     // Json
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 }
