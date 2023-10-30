@@ -84,5 +84,5 @@ dependencies {
 
 ktlint {
     android.set(true)
-    disabledRules.set(listOf("no-wildcard-imports"))
+    disabledRules.set(listOf("no-wildcard-imports", "package-name"))
 }
